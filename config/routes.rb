@@ -7,8 +7,6 @@ Rails.application.routes.draw do
 
   # Let users visit URLs:
 
-  # - /lottery/unlucky
-
   get("/lottery/unlucky", { :controller => "numbers", :action => "losers" })
 
   # PART 2: R→C→A→V DEBUGGING
@@ -47,17 +45,18 @@ Rails.application.routes.draw do
   #  - Add some static HTML to mock up the response that you want to send back.
   #  - Write the Ruby to make it dynamic, and work properly.
 
-  # /roll/1/6
-  # /roll/2/6
-  # /roll/3/6
-  # /roll/4/6
-  # /roll/5/6
-  # /roll/6/6
+  get("/roll/1/6", { :controller => "rolls", :action => "onesix" })
+  get("/roll/2/6", { :controller => "rolls", :action => "twosix" })
+  get("/roll/3/6", { :controller => "rolls", :action => "threesix" })
+  get("/roll/4/6", { :controller => "rolls", :action => "foursix" })
+  get("/roll/5/6", { :controller => "rolls", :action => "fivesix" })
+  get("/roll/6/6", { :controller => "rolls", :action => "sixsix" })
 
-  # /roll/1/4
-  # /roll/2/4
-  # /roll/3/4
-  # /roll/4/4
+  get("/roll/1/4", { :controller => "rolls", :action => "onefour" })
+  get("/roll/2/4", { :controller => "rolls", :action => "twofour" })
+  get("/roll/3/4", { :controller => "rolls", :action => "threefour" })
+  get("/roll/4/4", { :controller => "rolls", :action => "fourfour" })
+
   # /roll/1/8
   # /roll/2/8
   # /roll/1/10

@@ -109,5 +109,93 @@ class RollsController < ApplicationController
       end
       render({ :template => "rolls_stuff/4d4.html.erb"})
     end
+  
+    def oneeight
+      @arr = Array.new
 
+      1.times do
+        randnum = rand(1...8)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/1d8.html.erb"})
+    end
+
+    def twoeight
+      @arr = Array.new
+
+      2.times do
+        randnum = rand(1...8)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/2d8.html.erb"})
+    end
+
+    def threeeight
+      @arr = Array.new
+
+      3.times do
+        randnum = rand(1...8)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/3d8.html.erb"})
+    end
+
+    def oneten
+      @arr = Array.new
+
+      1.times do
+        randnum = rand(1...10)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/1d10.html.erb"})
+    end
+
+    def twoten
+      @arr = Array.new
+
+      2.times do
+        randnum = rand(1...10)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/2d10.html.erb"})
+    end
+  
+    def onetwenty
+      @arr = Array.new
+
+      1.times do
+        randnum = rand(1...20)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/1d20.html.erb"})
+    end
+
+    def twotwenty
+      @arr = Array.new
+
+      2.times do
+        randnum = rand(1...20)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/2d20.html.erb"})
+    end
+
+    def threetwenty
+      @arr = Array.new
+
+      3.times do
+        randnum = rand(1...20)
+        
+        @arr.push(randnum)
+      end
+      render({ :template => "rolls_stuff/3d20.html.erb"})
+    end
+  
 end
